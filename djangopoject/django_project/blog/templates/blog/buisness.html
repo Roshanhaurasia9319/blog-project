@@ -1,0 +1,69 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+buisness Blog
+{% endblock %}
+
+{% block content %}
+
+
+
+<style>
+  .scale{
+    text-align: center;
+  }
+  .heading1 {
+    background-color: rgb(55, 16, 196);
+    color: rgb(255, 255, 255);
+
+  }
+
+  .heading2 {
+    color: rgb(8, 1, 1);
+    margin: -15px;
+    
+  }
+
+  .btn-primary {
+    color: rgb(3, 0, 8);
+    background-color: rgb(124, 218, 241);
+  }
+</style>
+
+
+<body>
+
+
+  <div class="scale">
+    <p>
+    <h1><span class="heading1">buisness</span><span class="heading2"> Blog</span></h1>
+    </p>
+  </div>
+  <section class="container">
+    {% for post in posts %}
+    <article>
+      <div class="list-group">
+        <article>
+          <div class="media-body">
+            <div class="list-group">
+              <a href="#">{{post.author}}</a>
+              <small>{{post.date_posted}}</small>
+            </div>
+            <h1><a href="#">{{post.title}}</a></h1>
+            <p>{{post.content}}</p>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+  </section>
+ <section class="container">
+  <div class="container">
+
+    <button class="btn-primary" type="button">Button</button>
+
+  </div>
+ </section>
+
+</body>
+
+{% endblock %}

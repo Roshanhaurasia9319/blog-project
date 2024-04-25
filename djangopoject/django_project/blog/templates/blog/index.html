@@ -1,0 +1,47 @@
+ {% extends "blog/base.html" %}
+ 
+{% block title %}
+   Welcome
+{% endblock  %}
+  
+
+ {% block content %}
+ <!-- Main jumbotron for a primary marketing message or call to action -->
+ <div class="jumbotron" style="background-color: rgb(160, 136, 187);">
+  <div class="container">
+    <h1>Welcome to Amazing Blog</h1>
+    <p><strong>Raise your thoughts, not your voice</strong></p>
+    <p>
+      <a class="btn btn-primary btn-lg" href="{% url 'our' %}" role="button">Learn more &raquo;</a>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h1 class="version-one">BuisnessBlog</h1>
+      <p>
+        <a class="btn btn-default" href="{% url 'buisness' %}" role="button">View details &raquo;</a>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h2 class="version-one">Sports Blog</h2>
+
+      <p>
+        <a class="btn btn-default" href="{% url 'sports' %}" role="button">View details &raquo;</a>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h2 class="version-one">Entertainment Blogs</h2>
+
+
+      <p>
+        <a class="btn btn-default " href="{% url 'enter' %}" role="button">View details &raquo;</a>
+      </p>
+    </div>
+  </div>
+
+  <hr/>
+  {% endblock %}

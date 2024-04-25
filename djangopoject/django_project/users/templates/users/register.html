@@ -1,0 +1,68 @@
+{%extends "blog/base.html" %}
+
+
+{% block content %}
+<style>
+    .embed {
+        text-align: center;
+        background-color: rgb(51, 2, 80);
+        color: rgb(47, 255, 168);
+        margin: 100px;
+        padding: 50px;
+    }
+    h1{
+         background-color: crimson;
+    }
+
+    .outer {
+        background-color: rgb(10, 10, 58);
+        margin: auto;
+
+
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .boundary-container {
+        width: 80%;
+        max-width: 800px;
+        border: 2px solid #333;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+<div class="outer">
+    <div class="boundary-container">
+        <h1>Register Yourself</h1>
+        <p>Unveiling the Power of Blog Hosting: Your Path to a Successful Online Presence
+
+            In the dynamic realm of the digital age, blogging has emerged as an influential platform for expressing
+            ideas, sharing stories, and establishing a strong online presence. However, to truly harness the potential
+            of your blog and captivate your audience, choosing the right blog hosting is an essential step that should
+            not be overlooked.</p>
+    </div>
+    <div class="embed">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend style="color: chartreuse;">Join Now!</legend>
+                {{form.as_p}}
+            </fieldset>
+            <div class="form-group">
+                <button type="submit" style="background-color: green;">Sign Up</button>
+            </div>
+        </form>
+        <div>
+            <small>
+                Already have an account? <a href="{% url 'index' %}">Sign In</a>
+            </small>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
